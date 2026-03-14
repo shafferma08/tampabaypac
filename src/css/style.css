@@ -351,55 +351,12 @@ p {
   padding: 5rem 2rem 2.5rem;
 }
 
-/* ---- SUBTLE GEO TRIANGLE BACKGROUND ---- */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.04;
-  background-image:
-    linear-gradient(60deg, transparent 47%, rgba(255, 255, 255, 0.5) 47.5%, rgba(255, 255, 255, 0.5) 48.5%, transparent 49%),
-    linear-gradient(-60deg, transparent 47%, rgba(255, 255, 255, 0.5) 47.5%, rgba(255, 255, 255, 0.5) 48.5%, transparent 49%),
-    linear-gradient(60deg, transparent 47%, rgba(255, 255, 255, 0.3) 47.5%, rgba(255, 255, 255, 0.3) 48.5%, transparent 49%),
-    linear-gradient(-60deg, transparent 47%, rgba(255, 255, 255, 0.3) 47.5%, rgba(255, 255, 255, 0.3) 48.5%, transparent 49%);
-  background-size: 80px 140px, 80px 140px, 160px 280px, 160px 280px;
-  pointer-events: none;
-}
-
-/* ---- FILM GRAIN OVERLAY ---- */
+/* ---- FILM GRAIN OVERLAY (static, no animation) ---- */
 .hero__grain {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 200px 200px;
-  animation: grain 0.8s steps(4) infinite;
+  display: none;
 }
 
-@keyframes grain {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  25% {
-    transform: translate(-5%, -5%);
-  }
-
-  50% {
-    transform: translate(5%, 3%);
-  }
-
-  75% {
-    transform: translate(-3%, 5%);
-  }
-}
-
-/* ---- GLOW ORBS ---- */
+/* ---- GLOW ORBS (static, no animation) ---- */
 .hero__glow {
   position: absolute;
   border-radius: 50%;
@@ -414,7 +371,6 @@ p {
   background: rgba(255, 98, 0, 0.12);
   top: -15%;
   left: -8%;
-  animation: float-glow 8s ease-in-out infinite alternate;
 }
 
 .hero__glow--cyan {
@@ -423,7 +379,6 @@ p {
   background: rgba(36, 187, 237, 0.08);
   bottom: -10%;
   right: -8%;
-  animation: float-glow 10s ease-in-out infinite alternate-reverse;
 }
 
 .hero__glow--amber {
@@ -432,17 +387,6 @@ p {
   background: rgba(255, 192, 0, 0.06);
   top: 50%;
   right: 25%;
-  animation: float-glow 12s ease-in-out infinite alternate;
-}
-
-@keyframes float-glow {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  100% {
-    transform: translate(25px, -15px) scale(1.08);
-  }
 }
 
 /* ---- CONTENT ---- */
