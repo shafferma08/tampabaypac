@@ -659,6 +659,14 @@ p {
   max-width: unset;
 }
 
+.eco-intro {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--clr-text-muted);
+  max-width: unset;
+  margin-bottom: 0.25rem;
+}
+
 /* =============================================
    OPPORTUNITIES
    ============================================= */
