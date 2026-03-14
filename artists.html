@@ -180,9 +180,11 @@
 
     const modal = document.getElementById('artist-modal');
 
-    function openModal(key) {
+    function openModal(key, cardEl) {
       const a = artists[key];
-      document.getElementById('modal-photo').src = a.photo;
+      // Get the processed image src from the card's img (Vite handles HTML img src, not JS strings)
+      const cardImg = cardEl.querySelector('.artist-photo img');
+      document.getElementById('modal-photo').src = cardImg.src;
       document.getElementById('modal-photo').alt = a.name;
       document.getElementById('modal-name').textContent = a.name;
       document.getElementById('modal-title').textContent = a.title;
@@ -208,7 +210,7 @@
     }
 
     document.querySelectorAll('.artist-card').forEach(card => {
-      card.addEventListener('click', () => openModal(card.dataset.artist));
+      card.addEventListener('click', () => openModal(card.dataset.artist, card));
     });
 
     modal.querySelector('.artist-modal__close').addEventListener('click', closeModal);
