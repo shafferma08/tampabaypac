@@ -1,0 +1,49 @@
+/*
+  CSS variables for Public Art Collective (PAC)
+  Urban tropical theme with neon highlights and deep black background
+  Updated to match heavy geometric street art references.
+*/
+:root {
+  /* Brand Colors - Matched to Geometric Mural */
+  --clr-primary: #FF6200;       /* Vibrant Orange */
+  --clr-secondary: #24bbed;     /* Bright Cyan/Sky Blue */
+  --clr-accent: #FFC000;        /* Bold Yellow */
+  --clr-accent-2: #26b334;      /* Tropical Green */
+
+  /* Neutrals */
+  --clr-bg: #000000;          /* True Black for heavy contrast */
+  --clr-bg-alt: #0a0a0a;      /* Slight offset for depth */
+  --clr-text: #FFFFFF;        /* Pure white text */
+  --clr-text-muted: #B3B3B3;  /* Muted grey */
+
+  /* Structural/Borders */
+  --border-heavy: 4px solid var(--clr-bg);
+  --shadow-brutalist: 8px 8px 0px rgba(0, 0, 0, 1);
+  --shadow-brutalist-hover: 12px 12px 0px rgba(0, 0, 0, 1);
+
+  /* Typography */
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif; /* High impact for headings */
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 2rem;
+  --spacing-6: 3rem;
+  --spacing-8: 4rem;
+  --spacing-10: 6rem;
+  --spacing-12: 8rem;
+
+  /* Border-radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 100vw;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

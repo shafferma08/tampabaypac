@@ -1,0 +1,91 @@
+.site-footer {
+  background-color: var(--clr-bg-alt);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.92)), url('../assets/mural-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--spacing-10);
+  margin-top: var(--spacing-12);
+  border-top: var(--border-heavy);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+}
+
+.footer-grid {
+  display: grid;
+  gap: var(--spacing-8);
+  grid-template-columns: 1fr;
+}
+
+@media(min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.footer-col h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-4);
+  color: var(--clr-text);
+}
+
+.footer-col p {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-links a {
+  color: var(--clr-text-muted);
+  transition: color var(--transition-fast);
+  font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+  color: var(--clr-secondary);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255,255,255, 0.05);
+  transition: background-color var(--transition-fast), transform var(--transition-bounce);
+}
+
+.social-links a:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  transform: translateY(-4px);
+}
+
+.footer-bottom {
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-2);
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+}
+
+@media(min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

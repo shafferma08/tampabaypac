@@ -1,0 +1,175 @@
+/* Projects Page */
+.project-card {
+  background-color: var(--clr-bg-alt);
+  border: var(--border-heavy);
+  box-shadow: var(--shadow-brutalist);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.project-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: var(--shadow-brutalist-hover);
+}
+.project-thumbnail {
+  height: 250px;
+  background-color: #222;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: var(--border-heavy);
+}
+.project-thumbnail::before {
+  content: 'Image Placeholder';
+  color: var(--clr-text-muted);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+}
+.project-info {
+  padding: var(--spacing-4);
+}
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+  border-bottom: var(--border-heavy);
+  border-width: 2px;
+  padding-bottom: var(--spacing-2);
+}
+
+/* Artists Page */
+.artist-card {
+  text-align: center;
+  background-color: var(--clr-bg-alt);
+  border: var(--border-heavy);
+  box-shadow: var(--shadow-brutalist);
+  padding: var(--spacing-6);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.artist-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: var(--shadow-brutalist-hover);
+  border-color: var(--clr-secondary);
+}
+.artist-photo {
+  width: 120px;
+  height: 120px;
+  background-color: #333;
+  margin: 0 auto var(--spacing-4);
+  border: var(--border-heavy);
+  object-fit: cover;
+}
+.artist-tags {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-4);
+}
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border: var(--border-heavy);
+  border-width: 2px;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* Opportunities Page */
+.opp-card {
+  background-color: var(--clr-bg-alt);
+  padding: var(--spacing-6);
+  border: var(--border-heavy);
+  border-left-color: var(--clr-primary);
+  box-shadow: var(--shadow-brutalist);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+.opp-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: var(--shadow-brutalist-hover);
+  background-color: var(--clr-bg);
+  border-color: var(--clr-primary);
+}
+.opp-meta {
+  font-size: 0.875rem;
+  color: var(--clr-secondary);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+/* Get Involved Page */
+.involve-card {
+  background: var(--clr-bg-alt);
+  padding: var(--spacing-6);
+  text-align: center;
+  border: var(--border-heavy);
+  box-shadow: var(--shadow-brutalist);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.involve-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: var(--shadow-brutalist-hover);
+  background: var(--clr-bg);
+}
+.involve-card h3 {
+  color: var(--clr-text);
+  margin-bottom: var(--spacing-3);
+  font-weight: 900;
+}
+.involve-card p {
+  margin-bottom: var(--spacing-5);
+  margin-inline: auto;
+}
+
+/* Contact Page */
+.form-group {
+  margin-bottom: var(--spacing-4);
+}
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--clr-text);
+}
+.form-control {
+  width: 100%;
+  padding: var(--spacing-3);
+  background-color: var(--clr-bg-alt);
+  border: var(--border-heavy);
+  color: var(--clr-text);
+  font-weight: 600;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--clr-secondary);
+  background-color: var(--clr-bg);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+/* Home Page */
+.hero-main {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 100%), url('../assets/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: var(--border-heavy);
+}

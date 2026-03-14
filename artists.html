@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artist Directory for the Public Art Collective (PAC)." />
+  <title>Artist Directory | Public Art Collective (PAC)</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav-inner">
+      <a href="/" class="logo-wordmark">
+        <span class="logo-pac">PAC</span>
+        <span class="logo-sub">Public Art Collective</span>
+      </a>
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li><a href="/#our-story">About</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/artists.html" class="active">Artists</a></li>
+          <li><a href="/opportunities.html">Opportunities</a></li>
+        </ul>
+      </nav>
+      <a href="/get-involved.html" class="btn btn-primary">Join the Collective</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-padding">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: var(--spacing-8);">
+          <h1>The <span class="text-gradient">Collective</span></h1>
+          <p class="text-lead" style="margin-inline: auto; margin-top: var(--spacing-4);">
+            Meet the muralists, stencil artists, and visionaries transforming Tampa Bay.
+          </p>
+        </div>
+
+        <div class="artist-grid">
+
+          <!-- Johnny Vitale -->
+          <article class="artist-card" data-artist="johnny">
+            <div class="artist-photo">
+              <img src="/src/assets/artists/johnny-vitale.jpg" alt="Johnny Vitale" loading="lazy" />
+            </div>
+            <h3>Johnny Vitale</h3>
+            <p class="artist-card__title">Founder — Vitale Bros · Overspray Art Space</p>
+            <div class="artist-tags">
+              <span class="tag">Spray Paint</span>
+              <span class="tag">Murals</span>
+              <span class="tag">Pop Art</span>
+            </div>
+            <button class="artist-card__btn">View Profile</button>
+          </article>
+
+          <!-- Sionna -->
+          <article class="artist-card" data-artist="sionna">
+            <div class="artist-photo">
+              <img src="/src/assets/artists/sionna.jpg" alt="Sionna" loading="lazy" />
+            </div>
+            <h3>Sionna</h3>
+            <p class="artist-card__title">Muralist — Vitale Bros · @art.by.sio</p>
+            <div class="artist-tags">
+              <span class="tag">Murals</span>
+              <span class="tag">Realism</span>
+              <span class="tag">Mixed Media</span>
+            </div>
+            <button class="artist-card__btn">View Profile</button>
+          </article>
+
+          <!-- Derek Donnelly -->
+          <article class="artist-card" data-artist="derek">
+            <div class="artist-photo">
+              <img src="/src/assets/artists/derek-donnelly.jpg" alt="Derek Donnelly" loading="lazy" />
+            </div>
+            <h3>Derek Donnelly</h3>
+            <p class="artist-card__title">Founder — Saint Paint Arts · Public Art Project Inc.</p>
+            <div class="artist-tags">
+              <span class="tag">Murals</span>
+              <span class="tag">Tropical Realism</span>
+              <span class="tag">Community Art</span>
+            </div>
+            <button class="artist-card__btn">View Profile</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ARTIST MODAL -->
+  <div class="artist-modal" id="artist-modal" aria-hidden="true">
+    <div class="artist-modal__overlay"></div>
+    <div class="artist-modal__content">
+      <button class="artist-modal__close" aria-label="Close">&times;</button>
+      <div class="artist-modal__photo">
+        <img id="modal-photo" src="" alt="" />
+      </div>
+      <div class="artist-modal__info">
+        <h2 id="modal-name"></h2>
+        <p class="artist-card__title" id="modal-title"></p>
+        <div class="artist-tags" id="modal-tags"></div>
+        <p class="artist-modal__bio" id="modal-bio"></p>
+        <div class="artist-links" id="modal-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col" style="max-width: 300px;">
+        <h3><span class="text-gradient">PAC</span></h3>
+        <p>Connecting muralists, street artists, and public artists with paid opportunities. For artists, by artists.
+        </p>
+        <div class="social-links">
+          <a href="https://instagram.com/tampabayPAC" target="_blank" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="/#our-story">About PAC</a></li>
+          <li><a href="/projects.html">Featured Projects</a></li>
+          <li><a href="/artists.html">Artist Directory</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Get Involved</h3>
+        <ul class="footer-links">
+          <li><a href="/opportunities.html">Opportunities</a></li>
+          <li><a href="/get-involved.html">Support &amp; Donate</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Public Art Collective. All rights reserved.</p>
+      <p>Tampa Bay, Florida</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    const artists = {
+      johnny: {
+        name: 'Johnny Vitale',
+        title: 'Founder — Vitale Bros · Overspray Art Space',
+        photo: '/src/assets/artists/johnny-vitale.jpg',
+        tags: ['Spray Paint', 'Murals', 'Pop Art'],
+        bio: 'One half of the Vitale Brothers, Johnny has been shaping Tampa Bay\'s street art landscape since 1992. His work blends pop art, graffiti, and traditional mural techniques — from commissions for the Tampa Bay Rays and Buccaneers to founding Overspray Art Space in Gulfport, a hands-on spray painting studio offering classes, wall rentals, and community events.',
+        links: [
+          { text: 'vitalebrothers.com', url: 'https://vitalebrothers.com/' },
+          { text: 'Overspray Art Space', url: 'https://www.oversprayartspace.com/' }
+        ]
+      },
+      sionna: {
+        name: 'Sionna',
+        title: 'Muralist — Vitale Bros · @art.by.sio',
+        photo: '/src/assets/artists/sionna.jpg',
+        tags: ['Murals', 'Realism', 'Mixed Media'],
+        bio: 'Pinellas County native Sionna Macleish holds a BFA from Ringling College of Art and Design. Her versatile style ranges from graphic line-work and lettering to realism, using hand-painted and mixed-media techniques. A SHINE Mural Festival artist and member of the Vitale Bros team, she\'s created murals celebrating St. Petersburg\'s historic landmarks since 2020.',
+        links: [
+          { text: 'sio-nna.com', url: 'https://sio-nna.com/' },
+          { text: '@art.by.sio', url: 'https://www.instagram.com/art.by.sio/' }
+        ]
+      },
+      derek: {
+        name: 'Derek Donnelly',
+        title: 'Founder — Saint Paint Arts · Public Art Project Inc.',
+        photo: '/src/assets/artists/derek-donnelly.jpg',
+        tags: ['Murals', 'Tropical Realism', 'Community Art'],
+        bio: 'A St. Pete native, Derek Donnelly\'s vibrant, tropical-style murals can be found across Tampa Bay — from downtown St. Petersburg and the Grand Central District to Clearwater Beach and Gulfport. Founder of Saint Paint Arts and the non-profit Public Art Project Inc., he\'s a driving force behind the SHINE Mural Festival and a leading figure in the city\'s public art renaissance.',
+        links: [
+          { text: 'saintpaintarts.com', url: 'https://saintpaintarts.com/' },
+          { text: '@saintpaintarts', url: 'https://www.instagram.com/saintpaintarts/' }
+        ]
+      }
+    };
+
+    const modal = document.getElementById('artist-modal');
+
+    function openModal(key) {
+      const a = artists[key];
+      document.getElementById('modal-photo').src = a.photo;
+      document.getElementById('modal-photo').alt = a.name;
+      document.getElementById('modal-name').textContent = a.name;
+      document.getElementById('modal-title').textContent = a.title;
+      document.getElementById('modal-bio').textContent = a.bio;
+
+      const tagsEl = document.getElementById('modal-tags');
+      tagsEl.innerHTML = a.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+      const linksEl = document.getElementById('modal-links');
+      linksEl.innerHTML = a.links.map(l =>
+        `<a href="${l.url}" target="_blank" rel="noopener">${l.text}</a>`
+      ).join('');
+
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.artist-card').forEach(card => {
+      card.addEventListener('click', () => openModal(card.dataset.artist));
+    });
+
+    modal.querySelector('.artist-modal__close').addEventListener('click', closeModal);
+    modal.querySelector('.artist-modal__overlay').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  </script>
+</body>
+
+</html>
