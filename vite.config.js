@@ -8,7 +8,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        about: 'about.html',
         projects: 'projects.html',
         artists: 'artists.html',
         opportunities: 'opportunities.html',
