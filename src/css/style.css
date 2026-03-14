@@ -254,7 +254,7 @@ p {
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1100;
   background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(12px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.06);
